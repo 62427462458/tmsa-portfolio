@@ -1,621 +1,627 @@
 <!DOCTYPE html>
-
 <html lang="fr">
-
 <head>
-
   <meta charset="UTF-8" />
-
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Ayoub Benmoussa | Portfolio</title>
-
- 
-
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Cloud Privé HCI — PFE Ayoub Ben Moussa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
-
 </head>
-
 <body>
 
+<!-- ===== HEADER ===== -->
+<header class="header" id="header">
+  <div class="logo-wrap">
+    <div class="logo-img-bg">
+      <img src="images/logo_tmpa.png" alt="TMPA Logo" class="logo-img" />
+    </div>
+    <div class="logo-text">PFE <span>2026</span></div>
+  </div>
+  <nav>
+    <ul class="navbar" id="navbar">
+      <li><a href="#hero">Accueil</a></li>
+      <li><a href="#demo">Démo</a></li>
+      <li><a href="#context">Contexte</a></li>
+      <li><a href="#team">Équipe</a></li>
+      <li><a href="#phases">Phases</a></li>
+      <li><a href="#architecture">Architecture</a></li>
+      <li><a href="#technologies">Technologies</a></li>
+      <li><a href="pdf/rapport.pdf" target="_blank" class="nav-pdf"><i class="fas fa-file-pdf"></i> Rapport</a></li>
+    </ul>
+  </nav>
+  <i class="fas fa-bars" id="menu-icon"></i>
+</header>
 
+<!-- Mobile menu -->
+<div class="navbar-mobile" id="mobileNav">
+  <a href="#hero">Accueil</a>
+  <a href="#demo">Démo</a>
+  <a href="#context">Contexte</a>
+  <a href="#team">Équipe</a>
+  <a href="#phases">Phases</a>
+  <a href="#architecture">Architecture</a>
+  <a href="#technologies">Technologies</a>
+  <a href="pdf/rapport.pdf" target="_blank">Rapport PDF</a>
+</div>
 
-  <header class="header">
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <!-- Animated grid background -->
+  <div class="hero-grid">
+    <svg viewBox="0 0 1400 800" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <pattern id="grid" width="70" height="70" patternUnits="userSpaceOnUse">
+          <path d="M 70 0 L 0 0 0 70" fill="none" stroke="#00d4ff" stroke-width="0.4"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid)"/>
+      <line x1="0" y1="220" x2="1400" y2="220" stroke="#00d4ff" stroke-width="0.8" opacity="0.4">
+        <animate attributeName="opacity" values="0.2;0.7;0.2" dur="4s" repeatCount="indefinite"/>
+      </line>
+      <line x1="0" y1="520" x2="1400" y2="520" stroke="#0066ff" stroke-width="0.8" opacity="0.3">
+        <animate attributeName="opacity" values="0.1;0.5;0.1" dur="5s" repeatCount="indefinite"/>
+      </line>
+      <circle r="5" fill="#00d4ff" opacity="0.7">
+        <animateMotion dur="9s" repeatCount="indefinite" path="M0,220 L1400,220"/>
+      </circle>
+      <circle r="4" fill="#7c3aed" opacity="0.6">
+        <animateMotion dur="7s" repeatCount="indefinite" path="M1400,520 L0,520"/>
+      </circle>
+      <circle r="3" fill="#00d4ff" opacity="0.5">
+        <animateMotion dur="12s" repeatCount="indefinite" path="M700,0 L700,800"/>
+      </circle>
+    </svg>
+  </div>
+  <div class="hero-glow g1"></div>
+  <div class="hero-glow g2"></div>
 
-    <a href="#home" class="logo">AYOUB</a>
-
-    <i class="bx bx-menu" id="menu-icon"></i>
-
-    <nav class="navbar">
-
-      <a href="#home" class="active">Accueil</a>
-
-      <a href="#about">À propos</a>
-
-      <a href="#skills">Skills</a>
-
-      <a href="#services">Services</a>
-
-      <a href="#pfe">PFE</a>
-
-      <a href="#portfolio">Projects</a>
-
-      <a href="#education">Éducation</a>
-
-      <a href="#experience">Expérience</a>
-
-      <a href="#contact">Contact</a>
-
-    </nav>
-
-  </header>
-
-
-
-  <section class="home" id="home">
-
-    <div class="home-content">
-
-      <h3>Bonjour, je suis</h3>
-
-      <h1>Ayoub Benmoussa</h1>
-
-      <h3>Et je suis <span class="multiple-text"></span></h3>
-
-      <p>
-
-        Ingénieur Réseaux et Infrastructures Cloud, spécialisé dans la conception d'architectures résilientes, la virtualisation, la cybersécurité et l'automatisation. Expert dans le déploiement de solutions optimisées et sécurisées.      </p>
-
-      <div class="social-media">
-
-        <a href="mailto:ayoubbenmoussa239@gmail.com" target="_blank"><i class='bx bxl-gmail'></i></a>
-
-        <a href="https://wa.me/212620149548" target="_blank"><i class='bx bxl-whatsapp'></i></a>
-
-        <a href="https://www.linkedin.com/in/ayoub-benmoussa-945342234/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-
+  <div class="hero-inner">
+    <!-- Left: text -->
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Projet de Fin d'Études — TMPA · 2025/2026
       </div>
 
-      <a href="pdf/AYOUB_BENMOUSSA_CV.pdf" class="btn" target="_blank">Télécharger CV</a>
+      <h1 class="hero-title">
+        Infrastructure Hyper-Convergée<br>
+        <span class="accent">Cloud Privé Multi-Tenant</span><br>
+        <span class="dim">Sécurisée par Zero-Trust et Pilotée par IaC</span>
+      </h1>
 
-    </div>
-
-    <div class="home-img">
-
-      <img src="images/home.jpg" alt="Ayoub Benmoussa">
-
-    </div>
-
-  </section>
-
-
-
-  <section class="about" id="about">
-
-    <div class="about-img">
-
-      <img src="images/about.jpg" alt="À propos">
-
-    </div>
-
-    <div class="about-content">
-
-      <h2 class="heading">À propos de <span>Moi</span></h2>
-
-      <h3>Ingénieur Réseaux & Cloud Infrastructure</h3>
-
-      <p>
-
-        Passionné par l'administration système, les architectures Cloud, la virtualisation et le stockage, je combine une solide expertise académique en télécommunications avec une expérience pratique approfondie en automatisation et cybersécurité.
-
+      <p class="hero-desc">
+        Dans le cadre du stage PFE réalisé au sein de Tanger Med Port Authority, ce projet porte sur la conception et le déploiement d'une plateforme Cloud Privé IaaS hyper-convergée, multi-tenant, sécurisée par Zero-Trust et automatisée via Infrastructure as Code — alternative interne à AWS/Azure pour la DSI de Tanger Med.
       </p>
 
-      <p>
+      <div class="hero-ctas">
+        <a href="#architecture" class="btn-primary">
+          <i class="fas fa-layer-group"></i> Architecture
+        </a>
+        <a href="#demo" class="btn-ghost">
+          <i class="fas fa-play"></i> Voir la démo
+        </a>
+        <a href="pdf/rapport.pdf" target="_blank" class="btn-ghost">
+          <i class="fas fa-file-pdf"></i> Rapport
+        </a>
+      </div>
 
-        Ancien président du Microtech Club, j'ai développé de fortes compétences en gestion de projet, en leadership technique et en intégration de systèmes complexes. Mon objectif est de concevoir et d'optimiser des infrastructures cloud hautement disponibles et sécurisées selon les principes Zero-Trust.
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">3</div>
+          <div class="stat-label">Nœuds Proxmox</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">8</div>
+          <div class="stat-label">Chapitres rapport</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">ZT</div>
+          <div class="stat-label">Zero-Trust</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">IaC</div>
+          <div class="stat-label">Terraform+Ansible</div>
+        </div>
+      </div>
+    </div>
 
+    <!-- Right: photo -->
+    <div class="hero-photo-wrap">
+      <div class="photo-ring"></div>
+      <div class="photo-ring r2"></div>
+      <img src="images/home.jpg" alt="Ayoub Ben Moussa" class="hero-photo" />
+      <div class="photo-badge">
+        <i class="fas fa-shield-halved"></i>
+        <span>Zero-Trust</span>
+      </div>
+      <div class="photo-badge pb2">
+        <i class="fas fa-code"></i>
+        <span>IaC</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VIDEO DEMO ===== -->
+<section class="demo" id="demo">
+  <div class="section-header reveal">
+    <p class="section-label">// 01 — démonstration</p>
+    <h2 class="section-title">Vidéo de <span>Démonstration</span></h2>
+    <p class="section-desc">Présentation complète de la plateforme Cloud Privé HCI en fonctionnement réel.</p>
+  </div>
+
+  <div class="video-wrapper reveal">
+    <div class="video-container" id="videoContainer">
+      <video
+        id="localVideo"
+        poster="images/home.jpg"
+        controls
+        preload="metadata"
+      >
+        <source src="vid/mp_.mp4" type="video/mp4" />
+        Votre navigateur ne supporte pas la lecture vidéo HTML5.
+      </video>
+      <div class="video-overlay" id="videoOverlay">
+        <div class="play-btn-big" id="playBtnBig">
+          <i class="fas fa-play"></i>
+        </div>
+        <div class="vid-overlay-text">
+          <div class="vid-title">Démonstration — Cloud Privé HCI</div>
+          <div class="vid-sub">Tanger Med Port Authority · PFE 2025/2026</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-meta">
+      <div class="video-meta-info">
+        <h4>Infrastructure Cloud Privé HCI — PFE 2025/2026</h4>
+        <p>Ayoub Ben Moussa · Tanger Med Port Authority · Direction des Systèmes d'Information</p>
+      </div>
+      <div class="video-meta-tags">
+        <span class="tag">Proxmox VE</span>
+        <span class="tag">Ceph</span>
+        <span class="tag">Zero-Trust</span>
+        <span class="tag">IaC</span>
+        <span class="tag">ELK</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PDF Download -->
+  <div class="pdf-download reveal">
+    <div class="pdf-card">
+      <div class="pdf-icon"><i class="fas fa-file-pdf"></i></div>
+      <div class="pdf-info">
+        <h4>Rapport de PFE complet</h4>
+        <p>8 chapitres · Architecture détaillée · Résultats & Mesures RTO/RPO</p>
+      </div>
+      <a href="pdf/rapport.pdf" target="_blank" class="btn-primary">
+        <i class="fas fa-download"></i> Télécharger le rapport
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTEXT ===== -->
+<section class="context" id="context">
+  <div class="section-header reveal">
+    <p class="section-label">// 02 — contexte du stage</p>
+    <h2 class="section-title">Tanger Med <span>Port Authority</span></h2>
+    <p class="section-desc">Cadre institutionnel et problématique IT ayant motivé la conception du Cloud Privé.</p>
+  </div>
+
+  <div class="context-inner reveal">
+    <div class="context-left">
+      <div class="company-logo-wrap">
+        <img src="images/logo_tmpa.png" alt="Tanger Med Port Authority" class="company-logo" />
+      </div>
+      <div class="company-badge-pill">
+        <i class="fas fa-anchor"></i> Entreprise d'accueil
+      </div>
+      <h3 class="company-name">Groupe<br/><span>Tanger Med</span></h3>
+      <p class="company-desc">
+        Premier port à conteneurs d'Afrique et de la Méditerranée, Tanger Med Port Authority gère une infrastructure logistique critique de dimension internationale. La Direction des Systèmes d'Information (DSI) porte le besoin de moderniser son IT en déployant un cloud privé sécurisé et souverain.
       </p>
-
-      <a href="#skills" class="btn">Voir mes compétences</a>
-
+      <p class="company-desc mt">
+        Ce PFE répond à la problématique identifiée : <strong>comment offrir des ressources IaaS à la demande avec isolation stricte des tenants, haute disponibilité et sécurité Zero-Trust ?</strong>
+      </p>
+      <div class="company-stats">
+        <div class="cstat"><div class="cstat-num">#1</div><div class="cstat-lbl">Port Afrique & Méditerranée</div></div>
+        <div class="cstat"><div class="cstat-num">2002</div><div class="cstat-lbl">Année de création</div></div>
+        <div class="cstat"><div class="cstat-num">DSI</div><div class="cstat-lbl">Périmètre d'intervention</div></div>
+        <div class="cstat"><div class="cstat-num">IaaS</div><div class="cstat-lbl">Service cible déployé</div></div>
+      </div>
     </div>
 
-  </section>
-
-
-
-  <section class="skills" id="skills">
-
-    <h2 class="heading">Mes <span>Skills</span></h2>
-
-    <div class="skills-container">
-
-     
-
-      <div class="skill-box">
-
-        <h3>☁️ Cloud & Virtualisation</h3>
-
-        <p>Proxmox VE, VMware Workstation, ESXi, Stockage distribué Ceph (RBD, réplication x3, Haute Disponibilité), Architectures Cloud Privé & IaaS.</p>
-
-      </div>
-
-     
-
-      <div class="skill-box">
-
-        <h3>🛡️ Cybersécurité & ZTNA</h3>
-
-        <p>Pare-feu pfSense, Micro-segmentation réseau, Tunnels Cloudflare, WARP Client, Identity Access Management (Keycloak, Authentik SSO, MFA).</p>
-
-      </div>
-
-
-
-      <div class="skill-box">
-
-        <h3>📡 Réseaux & Télécoms</h3>
-
-        <p>Routage/Commutation Cisco (CCNA), VLANs (802.1Q), Routage inter-tenant, Planification réseau GSM (ATOLL), simulations ns-3 et MATLAB.</p>
-
-      </div>
-
-     
-
-      <div class="skill-box">
-
-        <h3>⚙️ DevOps & IaC</h3>
-
-        <p>Terraform (Provisionnement d'infrastructure par code), Ansible (Automatisation de configuration, Hardening CIS Benchmark), Scripts Python/Bash.</p>
-
-      </div>
-
-
-
-      <div class="skill-box">
-
-        <h3>🔄 Backup & Disaster Recovery</h3>
-
-        <p>Conception de plans PRA/PCA, Proxmox Backup Server, restauration automatisée de VMs, procédures de Disaster Recovery pour pare-feu (pfSense).</p>
-
-      </div>
-
-
-
-      <div class="skill-box">
-
-        <h3>📊 Supervision & Observabilité</h3>
-
-        <p>Grafana, Prometheus, Zabbix (Monitoring réseau et matériel), et ELK Stack (Elasticsearch, Logstash, Kibana) pour la centralisation des logs.</p>
-
-      </div>
-
-
-
-    </div>
-
-  </section>
-
-
-
-  <section class="services" id="services">
-
-    <h2 class="heading">Mes <span>Services</span></h2>
-
-    <div class="services-container">
-
-      <div class="services-box">
-
-        <i class='bx bx-cloud'></i>
-
-        <h3>Cloud & Virtualisation</h3>
-
-        <p>Conception, installation et gestion d'infrastructures cloud privées hyper-convergées (HCI) pour l'isolation et la résilience des données.</p>
-
-      </div>
-
-      <div class="services-box">
-
-        <i class='bx bx-shield-quarter'></i>
-
-        <h3>Sécurité Zero-Trust</h3>
-
-        <p>Mise en place de politiques d'accès strictes, micro-segmentation, authentification centralisée et sécurisation des accès distants.</p>
-
-      </div>
-
-      <div class="services-box">
-
-        <i class='bx bx-code-block'></i>
-
-        <h3>Infrastructure as Code</h3>
-
-        <p>Automatisation complète du provisionnement des machines virtuelles et gestion de configuration pour éliminer les erreurs humaines.</p>
-
-      </div>
-
-      <div class="services-box">
-
-        <i class='bx bx-wifi'></i>
-
-        <h3>Réseaux & Télécoms</h3>
-
-        <p>Architecture réseau, configuration d'équipements de routage, ingénierie de trafic et études de couverture radiofréquence.</p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <section class="pfe-section" id="pfe">
-
-    <h2 class="heading">Mon <span>PFE</span></h2>
-
-    <div class="pfe-container">
-
-      <div class="pfe-box">
-
-       
-
-        <img src="images/logo_tmpa.png" alt="Logo TMPA" class="pfe-small-logo">
-
-       
-
-        <h4>Tanger Med Port Authority (TMPA)</h4>
-
-        <p class="pfe-title">Infrastructure Hyper-Convergée Cloud Privé Multi-Tenant Sécurisée par Zero-Trust et Pilotée par IaC</p>
-
-       
-
-        <p class="pfe-quote">
-
-          "Conception d'une plateforme Cloud Privé IaaS simulant un cloud provider. Une solution hyper-convergée, hautement disponible, garantissant l'isolation stricte des tenants et provisionnée à la demande par le code."
-
-        </p>
-
-       
-
-        <ul class="pfe-list">
-
-          <li><strong>Socle HCI & Stockage :</strong> Cluster Proxmox VE (KVM) et stockage distribué Ceph (Réplication x3, tolérance aux pannes).</li>
-
-          <li><strong>Sécurité Zero-Trust :</strong> Pare-feu pfSense, micro-segmentation (VLAN/VXLAN), RBAC, et IAM Keycloak/Authentik (MFA obligatoire).</li>
-
-          <li><strong>Automatisation (IaC) :</strong> Terraform (provisionnement VM/IaaS) et Ansible (configuration OS & sécurité systèmes).</li>
-
-          <li><strong>Backup & Disaster Recovery :</strong> Proxmox Backup Server (PBS) et plans de reprise d'activité (PRA) automatisés par scripts (restauration VMs et pare-feu).</li>
-
-          <li><strong>Supervision & Audit :</strong> Prometheus, Grafana (alertes temps réel), et ELK Stack pour la traçabilité et les logs centralisés.</li>
-
+    <div class="context-right">
+      <div class="about-card">
+        <div class="about-card-title">Objectifs du projet</div>
+        <ul class="kpi-list">
+          <li class="kpi-item">
+            <div class="kpi-icon"><i class="fas fa-server"></i></div>
+            <div class="kpi-content">
+              <h4>Infrastructure Hyper-Convergée</h4>
+              <p>Fusionner compute, storage et réseau sur cluster Proxmox VE + KVM</p>
+            </div>
+          </li>
+          <li class="kpi-item">
+            <div class="kpi-icon"><i class="fas fa-shield-halved"></i></div>
+            <div class="kpi-content">
+              <h4>Sécurité Zero-Trust</h4>
+              <p>Aucun utilisateur ou machine n'est fiable par défaut — RBAC, MFA, Keycloak</p>
+            </div>
+          </li>
+          <li class="kpi-item">
+            <div class="kpi-icon"><i class="fas fa-code-branch"></i></div>
+            <div class="kpi-content">
+              <h4>Infrastructure as Code</h4>
+              <p>Déploiement entièrement piloté par Terraform & Ansible</p>
+            </div>
+          </li>
+          <li class="kpi-item">
+            <div class="kpi-icon"><i class="fas fa-chart-line"></i></div>
+            <div class="kpi-content">
+              <h4>Supervision & Audit</h4>
+              <p>Prometheus, Grafana, ELK Stack — monitoring temps réel et traçabilité</p>
+            </div>
+          </li>
+          <li class="kpi-item">
+            <div class="kpi-icon"><i class="fas fa-users-rectangle"></i></div>
+            <div class="kpi-content">
+              <h4>Multi-Tenant Isolé</h4>
+              <p>Isolation réseau stricte par VLAN/VXLAN entre tous les tenants</p>
+            </div>
+          </li>
         </ul>
-
-       
-
-        <a href="pdf/Rapport_PFE.pdf" class="btn" target="_blank">Consulter le Rapport</a>
-
-     
-
       </div>
-
     </div>
+  </div>
+</section>
 
-  </section>
+<!-- ===== TEAM ===== -->
+<section class="team" id="team">
+  <div class="section-header reveal">
+    <p class="section-label">// 03 — équipe projet</p>
+    <h2 class="section-title">Les <span>Acteurs</span> du PFE</h2>
+    <p class="section-desc">Étudiant et encadrants ayant contribué à la conception et au suivi du projet.</p>
+  </div>
 
-
-
-  <section class="portfolio" id="portfolio">
-
-    <h2 class="heading">Autres <span>Projets</span></h2>
-
-    <div class="portfolio-container">
-
-     
-
-      <div class="portfolio-box">
-
-        <img src="images/portfolio1.jpg" alt="Wumpus World">
-
-        <div class="portfolio-layer">
-
-          <h4>Wumpus World (Pi 5 & ArUco)</h4>
-
-          <p>Robot autonome d'exploration simulant l'environnement Wumpus World, évitant les obstacles grâce à OpenCV et ArUco.</p>
-
-          <a href="#" target="_blank"><i class="bx bx-link-external"></i></a>
-
+  <div class="team-layout reveal">
+    <!-- Student card -->
+    <div class="student-card">
+      <div class="student-photo-wrap">
+        <img src="images/home.jpg" alt="Ayoub Ben Moussa" class="student-photo" />
+        <div class="student-status">
+          <span class="dot"></span> Stagiaire PFE
         </div>
-
       </div>
-
-
-
-      <div class="portfolio-box">
-
-        <img src="images/portfolio2.jpg" alt="ATOLL">
-
-        <div class="portfolio-layer">
-
-          <h4>Planification GSM Tanger (ATOLL)</h4>
-
-          <p>Simulation de couverture réseau GSM1800, modélisation 3D du terrain et configuration de stations BTS à Tanger.</p>
-
-          <a href="https://www.linkedin.com/posts/ayoub-benmoussa-945342234_gsm-atoll-fstsettat-activity-7342918567064936449-asJy" target="_blank"><i class="bx bxl-linkedin"></i></a>
-
+      <div class="student-info">
+        <div class="team-role-label">// Étudiant stagiaire</div>
+        <h3 class="team-name">Ayoub Ben Moussa</h3>
+        <p class="team-desc">Concepteur et développeur de l'infrastructure Cloud Privé HCI. Responsable de l'ensemble des phases : déploiement, sécurisation, automatisation et supervision.</p>
+        <div class="student-tags">
+          <span class="tag">Proxmox VE</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">Zero-Trust</span>
+          <span class="tag">Ceph</span>
+          <span class="tag">ELK</span>
+          <span class="tag">pfSense</span>
         </div>
-
-      </div>
-
-
-
-      <div class="portfolio-box">
-
-        <img src="images/portfolio4.jpg" alt="VoIP">
-
-        <div class="portfolio-layer">
-
-          <h4>Infrastructure VoIP Trixbox</h4>
-
-          <p>Déploiement d'une solution de téléphonie IP IP-PBX Asterisk sous VMware avec gestion des trunks SIP/IAX.</p>
-
-          <a href="#" target="_blank"><i class="bx bx-link-external"></i></a>
-
+        <div class="student-links">
+          <a href="pdf/cv.pdf" target="_blank" class="btn-primary sm">
+            <i class="fas fa-file-pdf"></i> Mon CV
+          </a>
+          <a href="https://portfolio.ayoub-tmsa.org/" target="_blank" class="btn-ghost sm">
+            <i class="fas fa-globe"></i> Portfolio
+          </a>
         </div>
-
       </div>
+    </div>
 
-
-
-      <div class="portfolio-box">
-
-        <img src="images/portfolio7.jpg" alt="Machine CNC">
-
-        <div class="portfolio-layer">
-
-          <h4>Machine à Dessiner CNC</h4>
-
-          <p>Conception et exécution d’une machine CNC pour dessin automatique.</p>
-
-          <a href="#" target="_blank"><i class="bx bx-link-external"></i></a>
-
+    <!-- Encadrants -->
+    <div class="encadrants-wrap">
+      <div class="encadrants-label">Encadrants Entreprise</div>
+      <div class="encadrant-card">
+        <div class="enc-avatar" style="background:linear-gradient(135deg,#0066ff,#00d4ff)">AB</div>
+        <div class="enc-body">
+          <div class="team-role-label">// Encadrant — Infrastructure SI</div>
+          <h4 class="enc-name">M. Abdellah BOUJIDA</h4>
+          <p class="enc-title">Responsable de l'infrastructure des Systèmes d'Information (SI)</p>
+          <div class="enc-org">
+            <img src="images/logo_tmpa.png" alt="TMPA" class="enc-logo" />
+            Tanger Med Port Authority
+          </div>
         </div>
-
       </div>
 
-
-
-      <div class="portfolio-box">
-
-        <img src="images/portfolio8.jpg" alt="YOLOv8">
-
-        <div class="portfolio-layer">
-
-          <h4>Détection d'Objets YOLOv8</h4>
-
-          <p>Développement d'un script Python de vision par ordinateur pour la détection et le suivi d'éléments en temps réel.</p>
-
-          <a href="#" target="_blank"><i class="bx bx-link-external"></i></a>
-
+      <div class="encadrant-card">
+        <div class="enc-avatar" style="background:linear-gradient(135deg,#7c3aed,#0066ff)">YD</div>
+        <div class="enc-body">
+          <div class="team-role-label">// Encadrant — Stockage & Sauvegarde</div>
+          <h4 class="enc-name">M. Yassine DRIOUCH</h4>
+          <p class="enc-title">Chef de projet des systèmes de stockage et de sauvegarde</p>
+          <div class="enc-org">
+            <img src="images/logo_tmpa.png" alt="TMPA" class="enc-logo" />
+            Tanger Med Port Authority
+          </div>
         </div>
-
       </div>
+    </div>
+  </div>
+</section>
 
+<!-- ===== PHASES ===== -->
+<section class="phases" id="phases">
+  <div class="section-header reveal">
+    <p class="section-label">// 04 — planning & méthodologie</p>
+    <h2 class="section-title">Les <span>Phases</span> du Projet</h2>
+    <p class="section-desc">Décomposition méthodologique du projet en grandes étapes de réalisation.</p>
+  </div>
 
-
+  <div class="timeline reveal">
+    <div class="tl-item">
+      <div class="tl-marker"><span>1</span></div>
+      <div class="tl-card">
+        <div class="tl-phase-num">Phase 01</div>
+        <h3 class="tl-title">Analyse & Conception</h3>
+        <p class="tl-desc">Étude du contexte IT à la DSI Tanger Med. Identification des limites de l'infrastructure classique 3-tiers. Comparaison Proxmox vs VMware vs OpenStack. Conception de l'architecture HCI cible avec réseaux dédiés Management/Storage/Tenant/Supervision.</p>
+        <div class="tl-tags">
+          <span>Proxmox VE</span><span>KVM</span><span>HCI</span><span>Architecture</span>
+        </div>
+      </div>
     </div>
 
-  </section>
-
-
-
-  <section class="education" id="education">
-
-    <h2 class="heading">Mon <span>Éducation</span></h2>
-
-    <div class="education-container">
-
-     
-
-      <div class="education-box">
-
-        <img src="images/uh1-logo.png" alt="Université Hassan 1er" class="edu-logo">
-
-        <h3>MST – Ingénierie des Réseaux Informatiques et Systèmes de Télécommunications Intelligents</h3>
-
-        <h4>FST–Settat (Université Hassan 1er) | 2024 – En cours</h4>
-
-        <ul>
-
-          <li>Conception et gestion de réseaux complexes, architectures cloud, sécurité informatique et télécommunications avancées.</li>
-
-        </ul>
-
+    <div class="tl-item right">
+      <div class="tl-marker m2"><span>2</span></div>
+      <div class="tl-card">
+        <div class="tl-phase-num">Phase 02</div>
+        <h3 class="tl-title">Déploiement Cluster & Stockage Distribué</h3>
+        <p class="tl-desc">Installation du cluster Proxmox VE (3 nœuds), configuration Corosync HA, déploiement de Ceph Reef (OSD/MON/MGR). Réplication ×3, pools RBD pour VMs, CephFS pour partages. Tests de résilience et basculement automatique — si un nœud tombe, les VMs continuent.</p>
+        <div class="tl-tags">
+          <span>Ceph Reef</span><span>Corosync HA</span><span>RBD</span><span>Failover</span>
+        </div>
       </div>
-
-
-
-      <div class="education-box">
-
-        <img src="images/uae-logo.jpg" alt="Université Abdelmalek Essaâdi" class="edu-logo">
-
-        <h3>Licence d’Excellence – Microelectronics and Radio Frequency (MRF)</h3>
-
-        <h4>Faculté des Sciences – Tétouan (Université Abdelmalek Essaâdi) | 2023 – 2024</h4>
-
-        <ul>
-
-          <li>Électronique hyperfréquence, conception radiofréquence, prototypage de systèmes embarqués et projets IoT.</li>
-
-        </ul>
-
-      </div>
-
-
-
-      <div class="education-box">
-
-        <img src="images/uae-logo.jpg" alt="Université Abdelmalek Essaâdi" class="edu-logo">
-
-        <h3>Licence Sciences de la Matière Physique – Électronique</h3>
-
-        <h4>Faculté des Sciences – Tétouan (Université Abdelmalek Essaâdi) | 2022 – 2023</h4>
-
-        <ul>
-
-          <li>Spécialisation en électronique analogique et numérique, projet de fin d’études appliqué à l'automatisation.</li>
-
-        </ul>
-
-      </div>
-
-
-
-      <div class="education-box">
-
-        <img src="images/uae-logo.jpg" alt="Université Abdelmalek Essaâdi" class="edu-logo">
-
-        <h3>Diplôme d’Études Universitaires Générales (DEUG)</h3>
-
-        <h4>Faculté des Sciences – Tétouan (Université Abdelmalek Essaâdi) | 2020 – 2022</h4>
-
-        <ul>
-
-          <li>Concepts fondamentaux de la physique, thermodynamique, optique et mathématiques appliquées aux sciences.</li>
-
-        </ul>
-
-      </div>
-
-
-
     </div>
 
-  </section>
-
-
-
-  <section class="experience" id="experience">
-
-    <h2 class="heading">Mon <span>Expérience</span></h2>
-
-    <div class="education-container">
-
-     
-
-      <div class="education-box">
-
-        <img src="images/logo_tmpa.png" alt="Tanger Med Port Authority" class="edu-logo" style="width: 140px; border-radius: 4px;">
-
-        <h3>Stage de Fin d'Études (PFE) – Ingénieur Cloud & Sécurité</h3>
-
-        <h4>Tanger Med Port Authority (TMPA) | Février 2026 – En cours</h4>
-
-        <ul>
-
-          <li>Étude des limites des infrastructures traditionnelles et modélisation des besoins d'un cloud privé multi-tenant.</li>
-
-          <li>Déploiement pratique et automatisation IaC/DevOps d'architectures hyper-convergées hautement disponibles.</li>
-
-          <li>Élaboration et tests de scénarios de Disaster Recovery automatisés (PRA) pour les firewalls et VMs critiques.</li>
-
-          <li>Mise en œuvre d'une sécurité périmétrique et interne stricte suivant l'architecture Zero-Trust (NIST SP 800-207).</li>
-
-        </ul>
-
+    <div class="tl-item">
+      <div class="tl-marker m3"><span>3</span></div>
+      <div class="tl-card">
+        <div class="tl-phase-num">Phase 03</div>
+        <h3 class="tl-title">Réseau Multi-Tenant & Sécurité Zero-Trust</h3>
+        <p class="tl-desc">VLANs 802.1Q et VXLAN pour l'isolation inter-tenant. pfSense avec micro-segmentation. Keycloak/Authentik avec RBAC (Admin/Tenant/ReadOnly), MFA TOTP obligatoire, SSO. Tunnels Cloudflare Zero Trust et WARP VPN. Chiffrement at-rest (Ceph) et in-transit (TLS).</p>
+        <div class="tl-tags">
+          <span>pfSense</span><span>Keycloak</span><span>VXLAN</span><span>MFA</span><span>Cloudflare</span>
+        </div>
       </div>
-
-
-
-      <div class="education-box">
-
-        <img src="images/oncf.png" alt="ONCF" class="edu-logo" style="width: 100px; border-radius: 4px;">
-
-        <h3>Stage Technique – Signalisation & Télécommunications</h3>
-
-        <h4>Office National des Chemins de Fer (ONCF) | Khouribga, Maroc | Juillet 2025 – Août 2025</h4>
-
-        <ul>
-
-          <li><strong>Sujet :</strong> Surveillance en temps réel des communications GSM-R et supervision des équipements de transmission.</li>
-
-          <li><strong>Missions :</strong> Suivi des équipements de multiplexage PDH/SDH, basculement de liaisons fibre optique et maintenance des circuits de communication critiques.</li>
-
-          <li><strong>Compétences :</strong> Sécurité des télécommunications ferroviaires, gestion de réseaux de transport et résilience d'infrastructures d'envergure nationale.</li>
-
-        </ul>
-
-      </div>
-
-
-
     </div>
 
-  </section>
-
-
-
-  <section class="contact" id="contact">
-
-    <h2 class="heading">Contactez <span>Moi</span></h2>
-
-    <form action="#">
-
-      <div class="input-box">
-
-        <input type="text" placeholder="Nom complet" required>
-
-        <input type="email" placeholder="Adresse email" required>
-
+    <div class="tl-item right">
+      <div class="tl-marker m2"><span>4</span></div>
+      <div class="tl-card">
+        <div class="tl-phase-num">Phase 04</div>
+        <h3 class="tl-title">Automatisation Infrastructure as Code</h3>
+        <p class="tl-desc">Provisionnement de VMs par Terraform (CPU/RAM/Storage/réseau). Configuration OS et hardening CIS Benchmark via Ansible. Déploiement de services et snapshots automatisés. L'ensemble du cycle de vie de l'infrastructure est piloté par code, versionné et auditable.</p>
+        <div class="tl-tags">
+          <span>Terraform</span><span>Ansible</span><span>CIS Benchmark</span><span>IaC</span>
+        </div>
       </div>
-
-      <div class="input-box">
-
-        <input type="number" placeholder="Téléphone">
-
-        <input type="text" placeholder="Sujet">
-
-      </div>
-
-      <textarea cols="30" rows="10" placeholder="Votre message" required></textarea>
-
-      <input type="submit" value="Envoyer le message" class="btn">
-
-    </form>
-
-  </section>
-
-
-
-  <footer class="footer">
-
-    <div class="footer-text">
-
-      <p>&copy; 2026 Ayoub Benmoussa | Tous droits réservés</p>
-
     </div>
 
-    <div class="footer-iconTop">
-
-      <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
-
+    <div class="tl-item">
+      <div class="tl-marker m3"><span>5</span></div>
+      <div class="tl-card">
+        <div class="tl-phase-num">Phase 05</div>
+        <h3 class="tl-title">Backup, Disaster Recovery & Haute Disponibilité</h3>
+        <p class="tl-desc">Proxmox Backup Server (PBS) avec rétention max 3 backups/VM. Scripts DR automatisés : restore_clone.sh (5 phases, 6 VMs cibles), fw.sh et auto-console.sh pour pfSense. Interface Web TMPA (Flask + Authentik SSO). Scénarios de test résilience. RTO/RPO mesurés.</p>
+        <div class="tl-tags">
+          <span>PBS</span><span>Disaster Recovery</span><span>Flask</span><span>RTO/RPO</span>
+        </div>
+      </div>
     </div>
 
-  </footer>
+    <div class="tl-item right">
+      <div class="tl-marker m2"><span>6</span></div>
+      <div class="tl-card">
+        <div class="tl-phase-num">Phase 06</div>
+        <h3 class="tl-title">Supervision, Logs & Audit</h3>
+        <p class="tl-desc">Prometheus + node_exporter (scrape toutes les 15s). Dashboards Grafana (Proxmox, Ceph, VLAN, multi-tenant). Alertmanager délai < 2 min. ELK Stack : Filebeat / Logstash / Elasticsearch 8 / Kibana pour centralisation des logs et audit de traçabilité complète.</p>
+        <div class="tl-tags">
+          <span>Prometheus</span><span>Grafana</span><span>ELK</span><span>Kibana</span><span>Audit</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ===== ARCHITECTURE ===== -->
+<section class="architecture" id="architecture">
+  <div class="section-header reveal">
+    <p class="section-label">// 05 — architecture technique</p>
+    <h2 class="section-title">Les 5 <span>Couches</span> de l'Infrastructure</h2>
+    <p class="section-desc">Une architecture multicouche simulant un cloud provider privé interne complet.</p>
+  </div>
 
+  <div class="arch-grid reveal">
+    <div class="arch-card">
+      <div class="arch-num">01</div>
+      <div class="arch-icon"><i class="fas fa-microchip"></i></div>
+      <h3 class="arch-title">Socle Cloud & Virtualisation</h3>
+      <p class="arch-desc">Cluster Proxmox VE avec hyperviseur KVM. Nœuds HCI regroupant compute et storage.</p>
+      <ul class="arch-list">
+        <li>Proxmox VE 8.x — cluster 3 nœuds</li>
+        <li>Virtualisation KVM / QEMU</li>
+        <li>4 réseaux dédiés par nœud</li>
+        <li>Haute disponibilité Corosync HA</li>
+      </ul>
+    </div>
 
-  <script src="https://unpkg.com/scrollreveal"></script>
+    <div class="arch-card">
+      <div class="arch-num">02</div>
+      <div class="arch-icon"><i class="fas fa-database"></i></div>
+      <h3 class="arch-title">Stockage Hyper-Convergé</h3>
+      <p class="arch-desc">Ceph Reef assure la continuité des VMs même en cas de panne d'un nœud physique complet.</p>
+      <ul class="arch-list">
+        <li>Ceph Reef — OSD / MON / MGR</li>
+        <li>RBD pour VMs, CephFS pour partages</li>
+        <li>Réplication ×3 et tolérance pannes</li>
+        <li>Snapshots & sauvegardes automatisées</li>
+      </ul>
+    </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+    <div class="arch-card accent-card">
+      <div class="arch-num">03</div>
+      <div class="arch-icon"><i class="fas fa-shield-halved"></i></div>
+      <h3 class="arch-title">Sécurité Zero-Trust</h3>
+      <p class="arch-desc">Aucun utilisateur, machine ou réseau n'est considéré fiable par défaut. Vérification systématique.</p>
+      <ul class="arch-list">
+        <li>pfSense — firewall & micro-segmentation</li>
+        <li>Keycloak / Authentik — IAM, RBAC, MFA</li>
+        <li>Chiffrement at-rest (Ceph) + TLS</li>
+        <li>Cloudflare Zero Trust + WARP VPN</li>
+      </ul>
+    </div>
 
-  <script src="js/script.js"></script>
+    <div class="arch-card">
+      <div class="arch-num">04</div>
+      <div class="arch-icon"><i class="fas fa-code"></i></div>
+      <h3 class="arch-title">Automatisation IaC</h3>
+      <p class="arch-desc">L'intégralité du déploiement est piloté par code — infrastructure reproductible et versionnée.</p>
+      <ul class="arch-list">
+        <li>Terraform — VM, réseau, stockage</li>
+        <li>Ansible — hardening CIS & services</li>
+        <li>restore_clone.sh — DR en 5 phases</li>
+        <li>Interface Web TMPA (Flask + SSO)</li>
+      </ul>
+    </div>
 
+    <div class="arch-card">
+      <div class="arch-num">05</div>
+      <div class="arch-icon"><i class="fas fa-chart-bar"></i></div>
+      <h3 class="arch-title">Supervision & Audit</h3>
+      <p class="arch-desc">Observabilité complète : métriques temps réel, logs centralisés, alertes et traçabilité totale.</p>
+      <ul class="arch-list">
+        <li>Prometheus + node_exporter (15s)</li>
+        <li>Grafana — Proxmox, Ceph, VLAN</li>
+        <li>Alertmanager — alerte &lt; 2 min</li>
+        <li>ELK Stack — Elasticsearch, Kibana</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== KEY POINTS ===== -->
+<section class="keypoints" id="keypoints">
+  <div class="section-header reveal">
+    <p class="section-label">// 06 — points clés</p>
+    <h2 class="section-title">Apports <span>Majeurs</span> du PFE</h2>
+    <p class="section-desc">Ce que ce projet apporte concrètement à la DSI de Tanger Med Port Authority.</p>
+  </div>
+
+  <div class="kp-grid reveal">
+    <div class="kp-card"><div class="kp-num">01</div><div class="kp-body"><h4>Provisionnement automatique de VM</h4><p>Déploiement complet d'une VM en quelques minutes via Terraform, sans intervention manuelle.</p></div></div>
+    <div class="kp-card"><div class="kp-num">02</div><div class="kp-body"><h4>Cloud privé multi-tenant sécurisé</h4><p>Isolation réseau stricte — chaque équipe accède uniquement à ses propres ressources.</p></div></div>
+    <div class="kp-card"><div class="kp-num">03</div><div class="kp-body"><h4>Stockage distribué HCI</h4><p>Ceph assure la continuité des VMs même en cas de panne d'un nœud physique complet.</p></div></div>
+    <div class="kp-card"><div class="kp-num">04</div><div class="kp-body"><h4>MFA & RBAC obligatoires</h4><p>Aucun accès sans authentification forte. Permissions Admin / Tenant / ReadOnly.</p></div></div>
+    <div class="kp-card"><div class="kp-num">05</div><div class="kp-body"><h4>Disaster Recovery automatisé</h4><p>Restauration complète des VMs et du firewall pfSense — RTO et RPO mesurés précisément.</p></div></div>
+    <div class="kp-card"><div class="kp-num">06</div><div class="kp-body"><h4>Logs & traçabilité centralisés</h4><p>Chaque action (auth, VM, réseau, firewall) loggée, indexée et consultable dans Kibana.</p></div></div>
+    <div class="kp-card"><div class="kp-num">07</div><div class="kp-body"><h4>Tests de résilience & failover</h4><p>Scénarios de panne simulés : coupure nœud, perte OSD Ceph, basculement HA automatique.</p></div></div>
+    <div class="kp-card"><div class="kp-num">08</div><div class="kp-body"><h4>Infrastructure pilotée par code</h4><p>100% de l'infrastructure décrite en code versionnable — auditabilité et reproductibilité totales.</p></div></div>
+  </div>
+</section>
+
+<!-- ===== TECHNOLOGIES ===== -->
+<section class="technologies" id="technologies">
+  <div class="section-header reveal">
+    <p class="section-label">// 07 — stack technologique</p>
+    <h2 class="section-title">Technologies <span>Mises en Œuvre</span></h2>
+    <p class="section-desc">Un écosystème open-source complet couvrant toutes les couches de l'infrastructure.</p>
+  </div>
+
+  <div class="tech-categories reveal">
+    <div class="tech-cat">
+      <div class="tech-cat-label"><i class="fas fa-server"></i> Virtualisation & Cloud</div>
+      <div class="tech-items">
+        <div class="tech-item"><div class="tech-dot"></div><div><div class="tech-name">Proxmox VE 8.x</div><div class="tech-desc">Hyperviseur principal du cluster HCI</div></div></div>
+        <div class="tech-item"><div class="tech-dot"></div><div><div class="tech-name">KVM / QEMU</div><div class="tech-desc">Moteur de virtualisation bas niveau</div></div></div>
+        <div class="tech-item"><div class="tech-dot"></div><div><div class="tech-name">VMware Workstation</div><div class="tech-desc">Lab de simulation 3 nœuds virtuels</div></div></div>
+        <div class="tech-item"><div class="tech-dot"></div><div><div class="tech-name">Corosync HA</div><div class="tech-desc">Haute disponibilité & failover auto</div></div></div>
+      </div>
+    </div>
+
+    <div class="tech-cat">
+      <div class="tech-cat-label"><i class="fas fa-database"></i> Stockage Distribué</div>
+      <div class="tech-items">
+        <div class="tech-item"><div class="tech-dot"></div><div><div class="tech-name">Ceph Reef</div><div class="tech-desc">Stockage distribué HCI (OSD/MON/MGR)</div></div></div>
+        <div class="tech-item"><div class="tech-dot"></div><div><div class="tech-name">Ceph RBD</div><div class="tech-desc">Block storage pour VMs</div></div></div>
+        <div class="tech-item"><div class="tech-dot"></div><div><div class="tech-name">CephFS</div><div class="tech-desc">Système de fichiers partagés</div></div></div>
+        <div class="tech-item"><div class="tech-dot"></div><div><div class="tech-name">Proxmox Backup Server</div><div class="tech-desc">Sauvegarde & rétention des VMs</div></div></div>
+      </div>
+    </div>
+
+    <div class="tech-cat">
+      <div class="tech-cat-label"><i class="fas fa-shield-halved"></i> Sécurité Zero-Trust</div>
+      <div class="tech-items">
+        <div class="tech-item"><div class="tech-dot"></div><div><div class="tech-name">pfSense</div><div class="tech-desc">Firewall stateful & micro-segmentation</div></div></div>
+        <div class="tech-item"><div class="tech-dot"></div><div><div class="tech-name">Keycloak / Authentik</div><div class="tech-desc">IAM, SSO, RBAC, MFA TOTP</div></div></div>
+        <div class="tech-item"><div class="tech-dot"></div><div><div class="tech-name">Cloudflare Zero Trust</div><div class="tech-desc">Tunnels sécurisés & WARP VPN</div></div></div>
+        <div class="tech-item"><div class="tech-dot"></div><div><div class="tech-name">VLAN 802.1Q / VXLAN</div><div class="tech-desc">Isolation réseau inter-tenant</div></div></div>
+      </div>
+    </div>
+
+    <div class="tech-cat">
+      <div class="tech-cat-label"><i class="fas fa-code"></i> Automatisation IaC</div>
+      <div class="tech-items">
+        <div class="tech-item"><div class="tech-dot"></div><div><div class="tech-name">Terraform</div><div class="tech-desc">Provisionnement VM, réseau, stockage</div></div></div>
+        <div class="tech-item"><div class="tech-dot"></div><div><div class="tech-name">Ansible</div><div class="tech-desc">Hardening CIS, configuration OS</div></div></div>
+        <div class="tech-item"><div class="tech-dot"></div><div><div class="tech-name">Flask (Python)</div><div class="tech-desc">Interface Web TMPA + SSO Authentik</div></div></div>
+        <div class="tech-item"><div class="tech-dot"></div><div><div class="tech-name">Bash Scripts</div><div class="tech-desc">DR automatisé (restore_clone, fw.sh)</div></div></div>
+      </div>
+    </div>
+
+    <div class="tech-cat">
+      <div class="tech-cat-label"><i class="fas fa-chart-line"></i> Supervision & Logs</div>
+      <div class="tech-items">
+        <div class="tech-item"><div class="tech-dot"></div><div><div class="tech-name">Prometheus</div><div class="tech-desc">Scrape métriques toutes les 15s</div></div></div>
+        <div class="tech-item"><div class="tech-dot"></div><div><div class="tech-name">Grafana</div><div class="tech-desc">Dashboards Proxmox, Ceph, VLAN</div></div></div>
+        <div class="tech-item"><div class="tech-dot"></div><div><div class="tech-name">Elasticsearch 8</div><div class="tech-desc">Index et recherche des logs</div></div></div>
+        <div class="tech-item"><div class="tech-dot"></div><div><div class="tech-name">Logstash / Kibana</div><div class="tech-desc">Pipeline logs et visualisation audit</div></div></div>
+      </div>
+    </div>
+
+    <div class="tech-cat">
+      <div class="tech-cat-label"><i class="fas fa-network-wired"></i> Réseau</div>
+      <div class="tech-items">
+        <div class="tech-item"><div class="tech-dot"></div><div><div class="tech-name">Linux Bridges vmbr</div><div class="tech-desc">vmbr0 / vmbr1 / vmbr2 par nœud</div></div></div>
+        <div class="tech-item"><div class="tech-dot"></div><div><div class="tech-name">VLAN 802.1Q</div><div class="tech-desc">Segmentation réseau par tenant</div></div></div>
+        <div class="tech-item"><div class="tech-dot"></div><div><div class="tech-name">VXLAN Overlay</div><div class="tech-desc">Extension réseau overlay inter-nœuds</div></div></div>
+        <div class="tech-item"><div class="tech-dot"></div><div><div class="tech-name">WireGuard</div><div class="tech-desc">VPN sécurisé entre sites</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-left">
+    <img src="images/logo_tmpa.png" alt="TMPA" class="footer-logo" />
+    <div>
+      <div class="footer-brand">pfe.<span>ayoub-tmsa</span>.org</div>
+      <div class="footer-copy">© 2026 Ayoub Ben Moussa — PFE Tanger Med Port Authority</div>
+    </div>
+  </div>
+  <div class="footer-links">
+    <a href="#hero">Accueil</a>
+    <a href="#context">Contexte</a>
+    <a href="#team">Équipe</a>
+    <a href="#architecture">Architecture</a>
+    <a href="#demo">Démo</a>
+    <a href="pdf/rapport.pdf" target="_blank">Rapport</a>
+    <a href="https://ayoub-tmsa.org" target="_blank">Portfolio</a>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
 </body>
-
 </html>
